@@ -13,12 +13,12 @@ final class MapViewAnnotation: NSObject, MKAnnotation {
   
   var coordinate: CLLocationCoordinate2D
   var title: String?
-  var subTitle: String?
+  var subtitle: String?
   
   init(coordinate: CLLocationCoordinate2D, title: String, subtitle: String) {
     self.coordinate = coordinate
     self.title = title
-    self.subTitle = subtitle
+    self.subtitle = subtitle
     
     super.init()
   }

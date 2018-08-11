@@ -20,9 +20,9 @@ class ViewController: UIViewController {
     
     let cordinate = CLLocationCoordinate2D(latitude: 30.7047, longitude: 76.8003)
     let annotation = MapViewAnnotation(coordinate: cordinate, title: "Airtel", subtitle: "Bharti Airtel Limited")
-    
-    mapView.addAnnotation(annotation)
     mapView.setRegion(annotation.region, animated: true)
+
+    mapView.addAnnotation(annotation)
     
    }
 
@@ -32,17 +32,38 @@ class ViewController: UIViewController {
   }
 }
 
+//MARK: - MKMapViewDelegate
 extension ViewController: MKMapViewDelegate {
   
   func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-    if let mapAnotationView = self.mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier) as? MKMarkerAnnotationView {
-      
-      mapAnotationView.animatesWhenAdded = true
-      mapAnotationView.titleVisibility = .visible
-      return mapAnotationView
-    }
     
-    return nil
+    //MARK: - Default Annotation
+    /*
+     if let mapAnotationView = self.mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier) as? MKMarkerAnnotationView {
+     
+     mapAnotationView.animatesWhenAdded = true
+     mapAnotationView.titleVisibility = .visible
+     return mapAnotationView
+     
+     }
+     return nil
+     
+     */
+    
+    //MARK: - Set Custom Image to the Pin
+    if annotation is MKUserLocation { return nil }
+    
+    let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "CustomAnnotation")
+      
+      annotationView.image = #imageLiteral(resourceName: "location")
+      annotationView.canShowCallout = true
+      
+      return annotationView
+    
+  }
+  
+  func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+    print("Pin Annotation Tap: \(String(describing: view.annotation?.title ?? "No Title"))")
   }
   
 }
