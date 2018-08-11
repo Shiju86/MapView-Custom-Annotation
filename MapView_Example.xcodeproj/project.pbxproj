@@ -12,6 +12,7 @@
 		46E49317211EBD160014ACAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E49315211EBD160014ACAA /* Main.storyboard */; };
 		46E49319211EBD1B0014ACAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E49318211EBD1B0014ACAA /* Assets.xcassets */; };
 		46E4931C211EBD1B0014ACAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E4931A211EBD1B0014ACAA /* LaunchScreen.storyboard */; };
+		46E49324211EBD780014ACAA /* MapViewAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E49323211EBD780014ACAA /* MapViewAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		46E49318211EBD1B0014ACAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46E4931B211EBD1B0014ACAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46E4931D211EBD1B0014ACAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46E49323211EBD780014ACAA /* MapViewAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				46E49311211EBD160014ACAA /* AppDelegate.swift */,
 				46E49313211EBD160014ACAA /* ViewController.swift */,
+				46E49323211EBD780014ACAA /* MapViewAnnotation.swift */,
 				46E49315211EBD160014ACAA /* Main.storyboard */,
 				46E49318211EBD1B0014ACAA /* Assets.xcassets */,
 				46E4931A211EBD1B0014ACAA /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46E49314211EBD160014ACAA /* ViewController.swift in Sources */,
+				46E49324211EBD780014ACAA /* MapViewAnnotation.swift in Sources */,
 				46E49312211EBD160014ACAA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
